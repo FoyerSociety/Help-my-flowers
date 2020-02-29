@@ -1,0 +1,203 @@
+
+:root {
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--gray: #6c757d;
+	--gray-dark: #343a40;
+	--primary: #007bff;
+	--secondary: #6c757d;
+	--success: #28a745;
+	--info: #17a2b8;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--dark: #343a40;
+	--breakpoint-xs: 0;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+
+
+
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #fafafa;
+	position: fixed;
+}
+
+
+.cbp-spmenu a {
+	display: block;
+	color: white;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+
+
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 65px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	padding: 1em;
+}
+
+
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -240px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 1.5s ease;
+	-moz-transition: all 1.5s ease;
+	transition: all 1.5s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}
+
+.fa-info{
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 50px;
+	background-color: var(--teal);
+	box-shadow: 2px 2px 16px 0px #999;
+	transition-duration: 0.4s;
+}
+
+.fa-users{
+	padding: 10px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-radius: 50px;
+	background-color: var(--teal);
+	box-shadow: 2px 2px 16px 0px #999;
+	transition-duration: 0.4s;
+}
+
+.fa-paper-plane{
+	padding: 10px;
+	border-radius: 50px;
+	background-color: var(--teal);
+	box-shadow: 2px 2px 16px 0px #999;
+	transition-duration: 0.4s;
+}
+
+.fa-power-off{	
+	padding: 10px;
+	padding-left: 11px;
+	padding-right: 11px;
+	border-radius: 50px;
+	background-color: var(--teal);
+	box-shadow: 2px 2px 16px 0px #999;
+	transition-duration: 0.4s;
+}
+
+
+.fa-info:hover{
+	border: 1px solid var(--teal);
+	color: var(--teal);
+	background-color: white;
+	box-shadow: none;
+	transition-duration: 0.4s;
+}
+
+.fa-users:hover{
+	border: 1px solid var(--teal);
+	color: var(--teal);
+	background-color: white;
+	box-shadow: none;
+	transition-duration: 0.4s;
+}
+
+.fa-paper-plane:hover{
+	border: 1px solid var(--teal);
+	color: var(--teal);
+	background-color: white;
+	box-shadow: none;
+	transition-duration: 0.4s;
+}
+
+.fa-power-off:hover{
+	border: 1px solid var(--teal);
+	color: var(--teal);
+	background-color: white;
+	box-shadow: none;
+	transition-duration: 0.4s;
+}
