@@ -32,4 +32,3 @@ class Data():
 
 
 eel.start(mode="electron", port=1107)
-
