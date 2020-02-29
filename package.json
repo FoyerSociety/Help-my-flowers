@@ -1,0 +1,25 @@
+{
+  "name": "help-my-flowers",
+  "version": "1.0.0",
+  "description": "Une application Desktop de supervision d'une plante en fonction de l'humidité et de la lumière.",
+  "main": "main.js",
+  "scripts": {
+    "test": "python run.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoyerSociety/Help-my-flowers.git"
+  },
+  "keywords": [
+    "Arduino",
+    "Flowers",
+    "Electron",
+    "Python"
+  ],
+  "author": "Gaetan Jonathan - Landry Daniel - Karin Stelanony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FoyerSociety/Help-my-flowers/issues"
+  },
+  "homepage": "https://github.com/FoyerSociety/Help-my-flowers#readme"
+}
