@@ -2,8 +2,9 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
-function createWindow () {
-  // Create the browser window.
+function createWindowFull (win) {
+  win.hide()
+
   const mainWindow = new BrowserWindow({
     width: 1100,
     height: 620,
@@ -20,6 +21,18 @@ function createWindow () {
   // mainWindow.webContents.openDevTools()
 }
 
+function createWindow(){
 
+  const win = new BrowserWindow({
+    width:600,
+    height:200,
+    frame: false
+  })
+
+  win.loadFile('./static/loading.html')
+
+  setTimeout(function(){createWindowFull(win)}, 5000)
+  
+}
 
 app.on('ready', createWindow)
