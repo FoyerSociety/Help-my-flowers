@@ -201,3 +201,17 @@
 	box-shadow: none;
 	transition-duration: 0.4s;
 }
+
+
+.tooltip-inner {
+	border-radius: 13px; 
+	color: #FFFFFF; 
+	padding: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: 'Manjari';
+}
+
+.tooltip .tooltip-arrow {
+	border-top: 5px solid red !important;
+}
