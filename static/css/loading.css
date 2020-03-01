@@ -1,0 +1,48 @@
+body{
+        background-image: url('../images/load.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Manjari';
+}
+
+h1{
+        font-size: 55px;
+        font-weight: lighter;
+        color: white;
+        margin-top: 0%;
+        margin-left: 58%;
+        position: fixed;
+}
+
+
+h6{
+        font-size: 14px;
+        font-weight: lighter;
+        color: white;
+        margin-top: 9.8%;
+        margin-left: 64%;
+        position: fixed;
+}
+
+h4{
+        font-size: 12px;
+        font-weight: lighter;
+        color: white;
+        top: 78%;
+        left: 36%;
+        position: fixed;
+}
+
+
+#myProgress {
+        width: 80%;
+        position: fixed;
+        top: 89%;
+        left: 10%;
+      }
+      
+#myBar {
+        width: 0%;
+        height: 4px;
+        background-color: white;
+}
