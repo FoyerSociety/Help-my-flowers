@@ -57,20 +57,14 @@
 				<!-- Page Content  -->
 				<div id="content" class="p-4 p-md-5 pt-5" style="position: fixed; margin-left: 19%; width: 80% !important;">
 					<!--<h5 class="mb-4" style="text-align: center; font-weight: lighter !important;">DONNEES EN TEMPS REELS</h5>-->
-					<div class="container d-flex align-items-stretch" style="margin-top: -1%;">
-						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
-							<canvas id="myChart"></canvas>
-						</div>
-					</div>
 					<div class="container d-flex align-items-stretch" style="margin-top: -4%;">
-						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
-							<canvas id="myChart1"></canvas>
-						</div>
+						<canvas id="myChart" width="400" height="90"></canvas>
 					</div>
-					<div class="container d-flex align-items-stretch" style="margin-top: -4%;">
-						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
-							<canvas id="myChart2"></canvas>
-						</div>
+					<div class="container d-flex align-items-stretch" style="margin-top: 0%;">
+						<canvas id="myChart1" width="400" height="90"></canvas>
+					</div>
+					<div class="container d-flex align-items-stretch" style="margin-top: 0%;">
+						<canvas id="myChart2" width="400" height="90"></canvas>
 					</div>
 				</div>
 
@@ -158,8 +152,8 @@
   		data: {
 			datasets: [{
 				label: 'Lumière',
-				borderColor: 'teal',
-				backgroundColor: '#00808094',
+				borderColor: '#068a5e',
+				backgroundColor: '#068a5eb7',
 				data: []
 			}]
   		},
@@ -196,8 +190,8 @@
   		data: {
 			datasets: [{
 				label: 'Humidité',
-				borderColor: 'teal',
-				backgroundColor: '#00808094',
+				borderColor: '#068a5e',
+				backgroundColor: '#068a5eb7',
 				data: []
 			}]
   		},
