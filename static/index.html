@@ -108,117 +108,120 @@
 
 
 				var ctx = document.getElementById('myChart').getContext('2d');
-	var chart = new Chart(ctx, {
+				var chart = new Chart(ctx, {
 
-  		type: 'line',
-  		data: {
-			datasets: [{
-				label: 'Temperature',
-				borderColor: '#068a5e',
-				backgroundColor: '#068a5eb7',
-				data: []
-			}]
-  		},
-
-		options: {
-			title: {
-      				display: true,
-      				text: "Taux de temperature en temps réel"
-    			},
-			scales: {
-				xAxes: [{
-					type: 'realtime',
-					realtime: {
-						delay:1000,
-						onRefresh: function(chart) {
-							chart.data.datasets.forEach(function(dataset) {
-								dataset.data.push({
-									x: Date.now(),
-									y: Math.random()
-								});
-							});
-						}
+					type: 'line',
+					data: {
+						datasets: [{
+							label: 'Temperature',
+							borderColor: '#068a5e',
+							borderWidth: 1,
+							backgroundColor: '#068a5eb7',
+							data: []
+						}]
 					},
-				}]
-			}
-		}
-	});
 
-
-	var ctx = document.getElementById('myChart1').getContext('2d');
-	var chart = new Chart(ctx, {
-
-  		type: 'line',
-  		data: {
-			datasets: [{
-				label: 'Lumière',
-				borderColor: '#068a5e',
-				backgroundColor: '#068a5eb7',
-				data: []
-			}]
-  		},
-
-		options: {
-			title: {
-      				display: true,
-      				text: "Taux de lumière en temps réel"
-    			},
-			scales: {
-				xAxes: [{
-					type: 'realtime',
-					realtime: {
-						delay:1000,
-						onRefresh: function(chart) {
-							chart.data.datasets.forEach(function(dataset) {
-								dataset.data.push({
-									x: Date.now(),
-									y: Math.random()
-								});
-							});
+					options: {
+						title: {
+							display: true,
+							text: "Taux de temperature en temps réel"
+						},
+						scales: {
+							xAxes: [{
+								type: 'realtime',
+								realtime: {
+									delay:1000,
+									onRefresh: function(chart) {
+										chart.data.datasets.forEach(function(dataset) {
+											dataset.data.push({
+												x: Date.now(),
+												y: Math.random()
+											});
+										});
+									}
+								},
+							}]
 						}
+					}
+				});
+
+
+				var ctx = document.getElementById('myChart1').getContext('2d');
+				var chart = new Chart(ctx, {
+
+					type: 'line',
+					data: {
+						datasets: [{
+							label: 'Lumière',
+							borderColor: '#068a5e',
+							borderWidth: 1,
+							backgroundColor: '#068a5eb7',
+							data: []
+						}]
 					},
-				}]
-			}
-		}
-	});
 
-
-	var ctx = document.getElementById('myChart2').getContext('2d');
-	var chart = new Chart(ctx, {
-
-  		type: 'line',
-  		data: {
-			datasets: [{
-				label: 'Humidité',
-				borderColor: '#068a5e',
-				backgroundColor: '#068a5eb7',
-				data: []
-			}]
-  		},
-
-		options: {
-			title: {
-      				display: true,
-      				text: "Taux d'humidité en temps réel"
-    			},
-			scales: {
-				xAxes: [{
-					type: 'realtime',
-					realtime: {
-						delay:1000,
-						onRefresh: function(chart) {
-							chart.data.datasets.forEach(function(dataset) {
-								dataset.data.push({
-									x: Date.now(),
-									y: Math.random()
-								});
-							});
+					options: {
+						title: {
+							display: true,
+							text: "Taux de lumière en temps réel"
+						},
+						scales: {
+							xAxes: [{
+								type: 'realtime',
+								realtime: {
+									delay:1000,
+									onRefresh: function(chart) {
+										chart.data.datasets.forEach(function(dataset) {
+											dataset.data.push({
+												x: Date.now(),
+												y: Math.random()
+											});
+										});
+									}
+								},
+							}]
 						}
+					}
+				});
+
+
+				var ctx = document.getElementById('myChart2').getContext('2d');
+				var chart = new Chart(ctx, {
+
+					type: 'line',
+					data: {
+						datasets: [{
+							label: 'Humidité',
+							borderColor: '#068a5e',
+							borderWidth: 1,
+							backgroundColor: '#068a5eb7',
+							data: []
+						}]
 					},
-				}]
-			}
-		}
-	});
+
+					options: {
+						title: {
+							display: true,
+							text: "Taux d'humidité en temps réel"
+						},
+						scales: {
+							xAxes: [{
+								type: 'realtime',
+								realtime: {
+									delay:1000,
+									onRefresh: function(chart) {
+										chart.data.datasets.forEach(function(dataset) {
+											dataset.data.push({
+												x: Date.now(),
+												y: Math.random()
+											});
+										});
+									}
+								},
+							}]
+						}
+					}
+				});
 		
 			</script>
 	</body>
