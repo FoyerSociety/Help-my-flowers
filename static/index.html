@@ -58,20 +58,12 @@
 				<div id="content" class="p-4 p-md-5 pt-5" style="position: fixed; margin-left: 19%; width: 80% !important;">
 					<h5 class="mb-4" style="text-align: center; font-weight: lighter !important;">DONNEES EN TEMPS REELS</h5>
 					<div class="container d-flex align-items-stretch">
-						<span>HUMIDITE:</span><span >60</span>
-						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
+						<div class="chart-container" style="position: relative; height:35vh; width:40vw">
 							<canvas id="myChart"></canvas>
 						</div>
 					</div>
-					<div class="container d-flex align-items-stretch" style="margin-left: 52%; margin-top: -24%;">
-						<span>LUMIERE:</span><span >60</span>
-						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
-							<canvas id="myChart2"></canvas>
-						</div>
-					</div>
-					<div class="container d-flex align-items-stretch" style="margin-left: 5%;">
-						<span>TEMPERATURE:</span><span >80</span>
-						<div class="chart-container" style="position: relative; height:35vh; width:50vw">
+					<div class="container d-flex align-items-stretch" style="margin-top: 5%;">
+						<div class="chart-container" style="position: relative; height:35vh; width:40vw">
 							<canvas id="myChart1"></canvas>
 						</div>
 					</div>
@@ -122,10 +114,15 @@
   		type: 'line',
   		data: {
 			datasets: [{
-				label: 'Humidité',
+				label: 'Temperature',
 				borderColor: 'rgb(255, 99, 132)',
 				backgroundColor: 'rgba(255, 99, 132, 0.5)',
 				data: []
+			},{
+				label: 'Humidité',
+				borderColor: '#222222',
+				backgroundColor: '#999999',
+				data:[]
 			}]
   		},
 
@@ -160,45 +157,7 @@
   		type: 'line',
   		data: {
 			datasets: [{
-				label: 'Humidité',
-				borderColor: 'rgb(255, 99, 132)',
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
-				data: []
-			}]
-  		},
-
-		options: {
-			title: {
-      				display: true,
-      				text: "Taux de lumière en temps réel"
-    			},
-			scales: {
-				xAxes: [{
-					type: 'realtime',
-					realtime: {
-						delay:1000,
-						onRefresh: function(chart) {
-							chart.data.datasets.forEach(function(dataset) {
-								dataset.data.push({
-									x: Date.now(),
-									y: Math.random()
-								});
-							});
-						}
-					},
-				}]
-			}
-		}
-	});
-
-
-	var ctx = document.getElementById('myChart2').getContext('2d');
-	var chart = new Chart(ctx, {
-
-  		type: 'line',
-  		data: {
-			datasets: [{
-				label: 'Humidité',
+				label: 'Lumière',
 				borderColor: 'rgb(255, 99, 132)',
 				backgroundColor: 'rgba(255, 99, 132, 0.5)',
 				data: []
@@ -230,6 +189,5 @@
 	});
 		
 			</script>
-	
 	</body>
 </html>
