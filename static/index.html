@@ -56,15 +56,20 @@
 
 				<!-- Page Content  -->
 				<div id="content" class="p-4 p-md-5 pt-5" style="position: fixed; margin-left: 19%; width: 80% !important;">
-					<h5 class="mb-4" style="text-align: center; font-weight: lighter !important;">DONNEES EN TEMPS REELS</h5>
-					<div class="container d-flex align-items-stretch">
-						<div class="chart-container" style="position: relative; height:35vh; width:40vw">
+					<!--<h5 class="mb-4" style="text-align: center; font-weight: lighter !important;">DONNEES EN TEMPS REELS</h5>-->
+					<div class="container d-flex align-items-stretch" style="margin-top: -1%;">
+						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
 							<canvas id="myChart"></canvas>
 						</div>
 					</div>
-					<div class="container d-flex align-items-stretch" style="margin-top: 5%;">
-						<div class="chart-container" style="position: relative; height:35vh; width:40vw">
+					<div class="container d-flex align-items-stretch" style="margin-top: -4%;">
+						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
 							<canvas id="myChart1"></canvas>
+						</div>
+					</div>
+					<div class="container d-flex align-items-stretch" style="margin-top: -4%;">
+						<div class="chart-container" style="position: relative; height:35vh; width:30vw">
+							<canvas id="myChart2"></canvas>
 						</div>
 					</div>
 				</div>
@@ -115,21 +120,16 @@
   		data: {
 			datasets: [{
 				label: 'Temperature',
-				borderColor: 'rgb(255, 99, 132)',
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
+				borderColor: '#068a5e',
+				backgroundColor: '#068a5eb7',
 				data: []
-			},{
-				label: 'Humidité',
-				borderColor: '#222222',
-				backgroundColor: '#999999',
-				data:[]
 			}]
   		},
 
 		options: {
 			title: {
       				display: true,
-      				text: "Taux de lumière en temps réel"
+      				text: "Taux de temperature en temps réel"
     			},
 			scales: {
 				xAxes: [{
@@ -158,8 +158,8 @@
   		data: {
 			datasets: [{
 				label: 'Lumière',
-				borderColor: 'rgb(255, 99, 132)',
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
+				borderColor: 'teal',
+				backgroundColor: '#00808094',
 				data: []
 			}]
   		},
@@ -168,6 +168,44 @@
 			title: {
       				display: true,
       				text: "Taux de lumière en temps réel"
+    			},
+			scales: {
+				xAxes: [{
+					type: 'realtime',
+					realtime: {
+						delay:1000,
+						onRefresh: function(chart) {
+							chart.data.datasets.forEach(function(dataset) {
+								dataset.data.push({
+									x: Date.now(),
+									y: Math.random()
+								});
+							});
+						}
+					},
+				}]
+			}
+		}
+	});
+
+
+	var ctx = document.getElementById('myChart2').getContext('2d');
+	var chart = new Chart(ctx, {
+
+  		type: 'line',
+  		data: {
+			datasets: [{
+				label: 'Humidité',
+				borderColor: 'teal',
+				backgroundColor: '#00808094',
+				data: []
+			}]
+  		},
+
+		options: {
+			title: {
+      				display: true,
+      				text: "Taux d'humidité en temps réel"
     			},
 			scales: {
 				xAxes: [{
