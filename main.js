@@ -6,10 +6,10 @@ function createWindowFull (win) {
   win.hide()
 
   const mainWindow = new BrowserWindow({
-    width: 1100,
+    width: 1200,
     height: 620,
     center:true,
-    minWidth: 1100,
+    minWidth: 1200,
     minHeight: 620,
     webPreferences: {
       nodeIntegrations: true
