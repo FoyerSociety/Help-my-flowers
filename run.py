@@ -32,3 +32,4 @@ class Data():
 
 
 eel.start(mode="electron", port=1107)
+a = 'sdsds \' sdjsld'
