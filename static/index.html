@@ -9,7 +9,7 @@
 			<link rel="icon" href="images/leaf.png" title="Ravina">
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" type="text/css" href="css/rsidebar.css" />
-			<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+			<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 		</head>
 
 
@@ -106,7 +106,10 @@
 					$('[data-toggle="tooltip"]').tooltip({animation: true});
 				});*/
 
-
+				
+				Chart.defaults.global.defaultFontFamily = 'Manjari';
+				Chart.defaults.global.defaultFontSize = 14;
+				
 				var ctx = document.getElementById('myChart').getContext('2d');
 				var chart = new Chart(ctx, {
 
@@ -184,8 +187,7 @@
 					}
 				});
 
-				Chart.defaults.global.defaultFontFamily = 'Manjari';
-				Chart.defaults.global.defaultFontSize = 14;
+				
 				var ctx = document.getElementById('myChart2').getContext('2d');
 				var chart = new Chart(ctx, {
 
