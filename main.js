@@ -18,7 +18,7 @@ function createWindowFull (win) {
 
   mainWindow.setMenu(null)
   // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:1107/index.html')
+  mainWindow.loadURL('http://localhost:1107/history.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -132,7 +132,7 @@
 }
 
 .wrap-table100 {
-  width: 925px;
+  width: 950px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -196,7 +196,7 @@ th, td {
 }
 
 .table100-body {
-  max-height: 514px;
+  max-height: 550px;
   overflow: auto;
 }
 
@@ -497,4 +497,19 @@ th, td {
 
 .table100.ver5 .ps__rail-y .ps__thumb-y::before {
   background-color: #cccccc;
+}
+
+
+
+@media screen and (max-width: 1201px){
+    
+.table100-body {
+  max-height: 460px;
+  overflow: auto;
+}
+
+.wrap-table100 {
+  width: 850px;
+}
+
 }
